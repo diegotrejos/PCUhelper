@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Story: Agregar cursos al horario (MV2021A3-13)
+Subtasks: Realizar interfaz (MV2021A3-80),
+    Investigar y desarrollar spinners (MV2021A3-79),
+    Desarrollar spinner acorde al estandar (MV2021A3-81)
+Desarrollo de interfaz donde se ejemplifica lo que se mencionaba
+en los subtasks. Spinners completos, solo faltan los datos para la
+completa funcionalidad.
+Participantes:
+    Ricardo Franco (N)
+    Daniel Salazar (D)
+    Dennis Solano (N)
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.schedule.AddCourseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelCourseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@string/fuente"
+                android:text="@string/labelCourseName"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/contenido" />
+
+            <EditText
+                android:id="@+id/courseNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_top_bottom"
+                android:inputType="text"
+                android:padding="15dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/labelBuilding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@string/fuente"
+                android:text="@string/labelBuilding"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/contenido" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaciado"
+                android:layout_marginTop="@dimen/espaciado"
+                android:layout_marginEnd="@dimen/espaciado">
+
+                <Spinner
+                    android:id="@+id/spinnerBuilding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner"
+                    android:background="@color/dropdown_gray"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/dropdown_arrow"
+                    app:tint="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/labelClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@string/fuente"
+                android:text="@string/labelClass"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/contenido" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaciado"
+                android:layout_marginTop="@dimen/espaciado"
+                android:layout_marginEnd="@dimen/espaciado">
+
+                <Spinner
+                    android:id="@+id/spinnerClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner"
+                    android:background="@color/dropdown_gray"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/dropdown_arrow"
+                    app:tint="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <FrameLayout
+                android:id="@+id/fragment_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/fragment_placeholder_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:text="Eliminar horario"
+                android:textColor="@color/red_message"
+                android:textSize="@dimen/contenido_pequeno"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/fragment_placeholder2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/fragment_placeholder2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:text="Eliminar horario"
+                android:textColor="@color/red_message"
+                android:textSize="@dimen/contenido_pequeno"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/fragment_placeholder3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/fragment_placeholder3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:text="Eliminar horario"
+                android:textColor="@color/red_message"
+                android:textSize="@dimen/contenido_pequeno"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/fragment_placeholder4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/fragment_placeholder4_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:text="Eliminar horario"
+                android:textColor="@color/red_message"
+                android:textSize="@dimen/contenido_pequeno"
+                android:visibility="gone" />
+
+            <TableRow
+                android:id="@+id/tableRowAdd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="start">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/add_class_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@string/fuente"
+                        android:text="Agregar horario del curso"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/contenido" />
+
+                    <ImageView
+                        android:id="@+id/add_class_time_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="15dp"
+                        android:src="@drawable/add_image"
+                        app:tint="@color/colorPrimary" />
+                </RelativeLayout>
+            </TableRow>
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaciado"
+                android:layout_marginTop="@dimen/espaciado"
+                android:layout_marginEnd="@dimen/espaciado"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/espaciado"
+                    android:background="@drawable/button"
+                    android:text="@string/cancelar" />
+
+                <Button
+                    android:id="@+id/buttonAddCourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:text="Agregar" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/espaciado"
+            android:layout_marginEnd="@dimen/espaciado"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaciado"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:fontFamily="@string/fuente"
+                android:text="@string/change_name_nombre"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/contenido" />
+
+            <EditText
+                android:id="@+id/name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:background="@drawable/edit_text_top_bottom"
+                android:inputType="text"
+                android:padding="@dimen/caja_texto" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:fontFamily="@string/fuente"
+                android:text="@string/change_name_primer_apellido"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/contenido" />
+
+            <EditText
+                android:id="@+id/lastname1_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:background="@drawable/edit_text_top_bottom"
+                android:inputType="text"
+                android:padding="@dimen/caja_texto" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:fontFamily="@string/fuente"
+                android:text="@string/change_name_segundo_apellido"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/contenido" />
+
+            <EditText
+                android:id="@+id/lastname2_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:background="@drawable/edit_text_top_bottom"
+                android:inputType="text"
+                android:padding="@dimen/caja_texto" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/espaciado"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancel_name_changing_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/espaciado"
+                    android:background="@drawable/button"
+                    android:text="@string/cancelar" />
+
+                <Button
+                    android:id="@+id/change_name_confirmation_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:text="@string/aceptar" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

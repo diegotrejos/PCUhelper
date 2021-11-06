@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaciado"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@string/fuente"
+                android:text="Recuperar contraseña"
+                android:textColor="@color/white"
+                android:textSize="@dimen/titulo" />
+
+            <LinearLayout
+                android:id="@+id/emailContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaciado"
+                android:layout_marginEnd="@dimen/espaciado"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_top"
+                    android:hint="@string/login_correo"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/caja_texto"
+                    android:layout_marginBottom="@dimen/espaciado"
+                    />
+
+                <Button
+                    android:id="@+id/otpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/espaciado"
+                    android:background="@drawable/button"
+                    android:text="Enviar código"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/contenido_boton" />
+            </LinearLayout>
+
+            <!-- OTP Content, this will be visible after OTP is sent -->
+            <LinearLayout
+                android:id="@+id/otpContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaciado"
+                android:layout_marginEnd="@dimen/espaciado"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextOTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_top"
+                    android:hint="Escriba el código que recibió por correo"
+                    android:padding="@dimen/caja_texto"
+                    android:layout_marginBottom="@dimen/espaciado"
+                    />
+
+                <Button
+                    android:id="@+id/validateOTPButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/espaciado"
+                    android:background="@drawable/button"
+                    android:text="Validar código"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/contenido_boton" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
